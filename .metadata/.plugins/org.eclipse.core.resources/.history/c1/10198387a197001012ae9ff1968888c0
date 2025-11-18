@@ -1,0 +1,22 @@
+package ejercicio2;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * En tiempos de sequia hay que cuidar el agua de las piscinas y muchas engañan segun su forma.
+		 * calcula y muestra en pantalla el volumen de dos piscinas:
+		 * - Piscina olimpica (50m de largo por 21 de ancho) y 2.50 de profundidad
+		 * - Piscina circular de 1.80 de profundidad y 12 metros de radio
+		 * ¿Cuanto costará llenar cada una si el metro cubico cuesta 1.80€?
+		 */
+
+		//Variables:
+		
+		double alto1=2.5, ancho2=21.0, largo1=50.0;
+		double 
+		
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ejemplolectura.Leer"/>
+    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
+    <fullyQualifiedTypeName name="jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput"/>
+    <fullyQualifiedTypeName name="sun.nio.cs.ext.MSISO2022JP"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ"/>
+    <fullyQualifiedTypeName name="double"/>
+    <fullyQualifiedTypeName name="int"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.utilities.IntArray"/>
+    <fullyQualifiedTypeName name="java.util.random.RandomGenerator"/>
+    <fullyQualifiedTypeName name="ejercicio01.Cabecera"/>
+    <fullyQualifiedTypeName name="javax.swing.event.SwingPropertyChangeSupport"/>
+    <fullyQualifiedTypeName name="ejercicio07.Moneda"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="utilidades.Leer"/>
+</qualifiedTypeNameHistroy>
