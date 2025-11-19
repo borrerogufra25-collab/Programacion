@@ -16,6 +16,12 @@ public class Ticket {
 		return (precioBase * numBilletes) * saltos;
 	}
 
+	public double generarBillete() {
+		double total = 0.0;
+		total = precioBase + (saltos * numBilletes);
+		return total;
+	}
+
 	public String imprimirBillete() {
 
 		return "Billete válido para " + numBilletes + " persona/s, " + saltos + " saltos. Precio: " + calcularPrecio()
