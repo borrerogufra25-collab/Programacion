@@ -48,6 +48,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\fbg04\eclipse-workspace"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace\Programacion"/>
 			<item value="C:\Users\borrero.gufra25_tria\Documents\GitHub\Programaci-n"/>
