@@ -7,5 +7,4 @@ public class Alumno {
 	private double notas[];
 	private int suspensos;
 	private double media;
-	private String prueba;
 }
