@@ -17,9 +17,9 @@ public class Ticket {
 	}
 
 	public double generarBillete() {
-		double total = 0.0;
-		total = precioBase + (saltos * numBilletes);
-		return total;
+
+		return precioBase + (saltos * numBilletes);
+
 	}
 
 	public String imprimirBillete() {
