@@ -15,6 +15,7 @@ public class Principal {
 
 		Producto p;
 		LineaVenta lv;
+		LineaVenta2 lv2;
 
 		// Pido los datos antes de instaciar
 
@@ -46,7 +47,11 @@ public class Principal {
 		System.out.println("\n¿Cuántos productos lleva?");
 		cantidad = Leer.datoInt();
 		lv = new LineaVenta(p, cantidad);
-		System.out.printf("\nSubtotal: %:2f", lv.calcularSubTotal(por));
+		System.out.printf("\nSubtotal: %.2f", lv.calcularSubTotal(por));
+
+		lv2 = new LineaVenta2(cantidad);
+
+		System.out.printf("\nNuevo subtotal de la otra versión: %.2f", lv2.calcularSubtotalV2(por, p));
 
 	}
 

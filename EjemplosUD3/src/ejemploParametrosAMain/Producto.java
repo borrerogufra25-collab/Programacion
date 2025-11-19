@@ -41,7 +41,7 @@ public class Producto {
 		return "Producto [nombre=" + nombre + ", refrigerado=" + refrigerado + ", precioBase=" + precioBase + "]";
 	}
 
-	// Suna al precio base un porcentaje si es refrigerado
+	// Suma al precio base un porcentaje si es refrigerado
 
 	public double calcularPVP(double porcentaje) {
 		double total = 0.0, den = 100.0;
