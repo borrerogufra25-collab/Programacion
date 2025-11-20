@@ -11,6 +11,9 @@ package ejercicio11;
 public class Principal {
 
 	public static void main(String[] args) {
+		
+		System.out.println("Este programa gestiona un alumno");
+		System.out.println("Introduzca el nombre del alumno:");
 
 	}
 
