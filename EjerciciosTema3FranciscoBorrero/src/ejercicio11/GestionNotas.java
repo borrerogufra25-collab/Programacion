@@ -13,10 +13,14 @@ public class GestionNotas {
 
 	public void IntroducirNotas() {
 
-		for (int i = 0; i < alumno.getNotas().length; i++) {
+		for (int i = 0; i < alumno.setNotas().length; i++) {
 			System.out.println(i + 1 + "º Nota: ");
-			alumno.getNotas()[i] = Leer.datoDouble();
+			alumno.setNotas()[i] = Leer.datoDouble();
 		}
+
+	}
+
+	public void MostrarNotas() {
 
 	}
 

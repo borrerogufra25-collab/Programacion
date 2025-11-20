@@ -35,7 +35,7 @@ public class Alumno {
 		this.curso = curso;
 	}
 
-	public double[] getNotas() {
+	public double[] setNotas() {
 		return notas;
 	}
 

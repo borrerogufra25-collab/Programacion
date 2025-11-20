@@ -51,7 +51,7 @@ public class Maquina {
 		return saldo;
 	}
 
-	public void cambiarPrecio(double nuevoPrecio) {
+	public void CambiarPrecio(double nuevoPrecio) {
 		this.precioBase = nuevoPrecio;
 	}
 
@@ -62,4 +62,6 @@ public class Maquina {
 	public int getNumMaquina() {
 		return numMaquina;
 	}
+	
+	
 }

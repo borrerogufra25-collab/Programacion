@@ -66,7 +66,7 @@ public class Principal {
 						case 2:
 							System.out.print("Nuevo precio base: ");
 							double nuevoPrecio = Leer.datoDouble();
-							maquina.cambiarPrecio(nuevoPrecio);
+							maquina.CambiarPrecio(nuevoPrecio);
 							System.out.println("Precio actualizado a " + nuevoPrecio + " €");
 							break;
 						}
