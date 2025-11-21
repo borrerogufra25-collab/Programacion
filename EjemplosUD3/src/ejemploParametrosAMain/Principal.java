@@ -10,12 +10,18 @@ public class Principal {
 		double precioB, por = 0;
 		int ref, cantidad;
 		boolean refrigerado = false;
+		double totalVenta = 0.0;
+		String nombreVendedor = "Fran";
+		// Esto habría que pedirlo por teclado y demás
+		double[] listaImpuestos = { 30.0, 42.0, 10.0 };
 
 		// Declaración
 
 		Producto p;
 		LineaVenta lv;
 		LineaVenta2 lv2;
+		Venta v;
+		Venta2 v2;
 
 		// Pido los datos antes de instaciar
 
@@ -52,6 +58,18 @@ public class Principal {
 		lv2 = new LineaVenta2(cantidad);
 
 		System.out.printf("\nNuevo subtotal de la otra versión: %.2f", lv2.calcularSubtotalV2(por, p));
+
+		// Pedir datos de una venta
+
+		v = new Venta(totalVenta, nombreVendedor, listaImpuestos);
+
+		System.out.printf("\nMedia de impuestos: %.2f", v.calcularMediaImpuestos());
+
+		// Esto es la segunda versión
+
+		v2 = new Venta2(totalVenta, nombreVendedor);
+
+		System.out.printf("\nMedia de impuestos: %.2f", v2.calcularMediaImpuestosV2(listaImpuestos));
 
 	}
 

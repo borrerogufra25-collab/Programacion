@@ -1,5 +1,7 @@
 package ejercicio11;
 
+import utilidades.Leer;
+
 /*
  * Crear un programa para poner las notas de un alumno (clase Alumno con atributos). 
  * Los atributos de un alumno son su nombre, curso, un array de notas, número de suspensos 
@@ -11,10 +13,26 @@ package ejercicio11;
 public class Principal {
 
 	public static void main(String[] args) {
-		
-		System.out.println("Este programa gestiona un alumno");
-		System.out.println("Introduzca el nombre del alumno:");
 
+		String nombre,curso;
+		double[] notas;
+		int suspensos;
+		int tam;
+		double notaMedia;
+		GestionNotas g;
+		Alumno a;
+
+		System.out.println("Este programa gestiona un alumno\n");
+		System.out.println("Introduzca el nombre del alumno:");
+		nombre=Leer.dato();
+		System.out.println("Introduzca el curso del alumno:");
+		curso = Leer.dato();
+		System.out.println("¿Cuántas notas quieres introducir?");
+		
+		
+		
+		
+		
 	}
 
 }

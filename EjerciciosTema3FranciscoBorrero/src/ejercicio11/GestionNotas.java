@@ -11,16 +11,36 @@ public class GestionNotas {
 		this.alumno = alumno;
 	}
 
-	public void IntroducirNotas() {
+	public void mostrarNotas() {
 
-		for (int i = 0; i < alumno.setNotas().length; i++) {
-			System.out.println(i + 1 + "º Nota: ");
-			alumno.setNotas()[i] = Leer.datoDouble();
+		for (int i = 0; i < alumno.getNotas().length; i++) {
+
+			System.out.println(i + 1 + " º nota: " + alumno.getNotas()[i]);
+
 		}
 
 	}
 
-	public void MostrarNotas() {
+	public double calcularMedia() {
+		double suma = 0.0;
+
+		for (int i = 0; i < alumno.getNotas().length; i++) {
+
+			suma = suma + alumno.getNotas()[i];
+
+		}
+		return suma / alumno.getNotas().length;
+	}
+
+	public int montrarSuspensos() {
+		int suspensos = 0;
+		for (int i = 0; i < alumno.getNotas().length; i++) {
+
+			if (alumno.getNotas()[i] < 5) {
+				suspensos++;
+			}
+		}
+		return suspensos;
 
 	}
 
