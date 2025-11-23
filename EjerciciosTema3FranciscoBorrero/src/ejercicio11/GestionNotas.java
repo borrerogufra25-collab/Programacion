@@ -1,7 +1,5 @@
 package ejercicio11;
 
-import utilidades.Leer;
-
 public class GestionNotas {
 
 	private Alumno alumno;
@@ -14,20 +12,15 @@ public class GestionNotas {
 	public void mostrarNotas() {
 
 		for (int i = 0; i < alumno.getNotas().length; i++) {
-
-			System.out.println(i + 1 + " º nota: " + alumno.getNotas()[i]);
-
+			System.out.println(i + 1 + "º nota: " + alumno.getNotas()[i]);
 		}
-
 	}
 
 	public double calcularMedia() {
 		double suma = 0.0;
 
 		for (int i = 0; i < alumno.getNotas().length; i++) {
-
 			suma = suma + alumno.getNotas()[i];
-
 		}
 		return suma / alumno.getNotas().length;
 	}
