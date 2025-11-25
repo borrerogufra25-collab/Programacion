@@ -40,18 +40,42 @@ public class Tienda {
 		listaProd[contador] = p;
 	}
 
-	public Producto buscarPorId(int id) {
-		
-		
-		boolean encontrado;
-		
-		while (condition) {
-			if (id==listaProd[i].getId())
-		}
-		
-		
-		return p;
+	public int buscarById(int id) {
+		boolean encontrado = false;
+		int i = 0;
 
+		while (i < listaProd.length && !encontrado) {
+			if (listaProd[i].getId() == id) {
+				encontrado = true;
+			} else {
+				i++;
+			}
+			if (encontrado) {
+				return i;
+			} else {
+				return -1;
+			}
+		}
+
+	}
+
+	public Producto buscarByIdV2(int id) {
+
+		boolean encontrado = false;
+		int i = 0;
+
+		while (i < listaProd.length && !encontrado) {
+			if (listaProd[i].getId() == id) {
+				encontrado = true;
+			} else {
+				i++;
+			}
+			if (encontrado) {
+				return listaProd[i]; // Devolvemos el producto buscado
+			} else {
+				return null;
+			}
+		}
 	}
 
 }
