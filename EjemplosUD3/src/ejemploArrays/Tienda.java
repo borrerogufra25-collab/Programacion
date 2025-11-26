@@ -78,4 +78,39 @@ public class Tienda {
 		}
 	}
 
+	// Buscar la lista completa
+
+	public Producto[] findAll() {
+		return listaProd;
+	}
+
+	// Mostrar todos los productos de la lista
+
+	public void imprimirTodosLosProductos() {
+		for (int i = 0; i < listaProd.length; i++) {
+			System.out.println((i + 1) + ". " + listaProd[i]);
+		}
+	}
+
+	// Modificar precio
+
+	public void modificarPrecio(int id, double precioNuevo) {
+
+		int indice = buscarById(id);
+		if (indice >= 0) {
+			listaProd[indice].setPrecio(precioNuevo);
+		}
+
+	}
+
+	// Borrar
+
+	public void delete(int id) {
+		int indice = buscarById(id); // Devuelve el índice del array
+		if (indice >= 0) {
+			listaProd[indice].setActivo(false);
+
+		}
+	}
+
 }
