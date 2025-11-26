@@ -113,4 +113,33 @@ public class Tienda {
 		}
 	}
 
+	// Calcular media
+
+	public double calcularMedia() {
+
+		double sumar = 0.0;
+
+		for (int i = 0; i < listaProd.length; i++) {
+
+			if (listaProd[i] != null) {
+				sumar = sumar + listaProd[i].getPrecio();
+			}
+		}
+		return sumar / listaProd.length;
+	}
+
+	public Producto[] findByName(String nombreProducto) {
+
+		Producto[] listaNombres = new Producto[listaProd.length];
+		int i = 0;
+
+		while (i < listaProd.length) {
+			if (listaProd[i].getNombre().equalsIgnoreCase(nombreProducto)) { // equalsIgnoreCase Le da igual mayusculas
+																				// o minusculas
+				listaNombres[i] = listaProd[i];
+				i++;
+			}
+		}
+		return listaNombres;
+	}
 }
