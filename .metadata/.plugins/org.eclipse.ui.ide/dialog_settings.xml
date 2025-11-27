@@ -7,8 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace\Programacion\EjerciciosTema3FranciscoBorrero"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace"/>
+			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace\Programacion\EjerciciosTema3FranciscoBorrero"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace\Tema 2"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse antiguo\viejos\ExamT1FranciscoBorrero"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace\UD1Ejercicios1FranciscoBorreroGuerrero"/>
@@ -48,14 +48,15 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace\EjerciciosBoletin2Tema3FranciscoBorreroGuerrero"/>
 			<item value="C:\Users\fbg04\eclipse-workspace"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace"/>
 			<item value="C:\Users\borrero.gufra25_tria\eclipse-workspace\Programacion"/>
 			<item value="C:\Users\borrero.gufra25_tria\Documents\GitHub\Programaci-n"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="160"/>
-			<item key="DIALOG_Y_ORIGIN" value="129"/>
+			<item key="DIALOG_X_ORIGIN" value="631"/>
+			<item key="DIALOG_Y_ORIGIN" value="146"/>
 			<item key="DIALOG_WIDTH" value="885"/>
 			<item key="DIALOG_HEIGHT" value="629"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
