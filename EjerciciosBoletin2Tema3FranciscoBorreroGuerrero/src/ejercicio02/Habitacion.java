@@ -2,36 +2,37 @@ package ejercicio02;
 
 public class Habitacion {
 
-	private int numero;
-	private int tipo;
+	private int numeroHabitacion;
+	private String tipo; // sencilla, doble o triple
 	private double precioBase;
-	private String clienteAsig;
+	private String clienteAsignado;
 	private boolean limpia;
 	private boolean ocupada;
 
-	public Habitacion(int numero, int tipo, double precioBase, String clienteAsig, boolean limpia, boolean ocupada) {
+	public Habitacion(int numeroHabitacion, String tipo, double precioBase, String clienteAsignado, boolean limpia,
+			boolean ocupada) {
 		super();
-		this.numero = numero;
+		this.numeroHabitacion = numeroHabitacion;
 		this.tipo = tipo;
 		this.precioBase = precioBase;
-		this.clienteAsig = clienteAsig;
+		this.clienteAsignado = clienteAsignado;
 		this.limpia = limpia;
 		this.ocupada = ocupada;
 	}
 
-	public int getNumero() {
-		return numero;
+	public int getNumeroHabitacion() {
+		return numeroHabitacion;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setNumeroHabitacion(int numeroHabitacion) {
+		this.numeroHabitacion = numeroHabitacion;
 	}
 
-	public int getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(int tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
@@ -43,12 +44,12 @@ public class Habitacion {
 		this.precioBase = precioBase;
 	}
 
-	public String getClienteAsig() {
-		return clienteAsig;
+	public String getClienteAsignado() {
+		return clienteAsignado;
 	}
 
-	public void setClienteAsig(String clienteAsig) {
-		this.clienteAsig = clienteAsig;
+	public void setClienteAsignado(String clienteAsignado) {
+		this.clienteAsignado = clienteAsignado;
 	}
 
 	public boolean isLimpia() {
@@ -69,8 +70,8 @@ public class Habitacion {
 
 	@Override
 	public String toString() {
-		return "Habitacion [numero=" + numero + ", tipo=" + tipo + ", precioBase=" + precioBase + ", clienteAsig="
-				+ clienteAsig + ", limpia=" + limpia + ", ocupada=" + ocupada + "]";
+		return "Habitacion [numeroHabitacion=" + numeroHabitacion + ", tipo=" + tipo + ", precioBase=" + precioBase
+				+ ", clienteAsignado=" + clienteAsignado + ", limpia=" + limpia + ", ocupada=" + ocupada + "]";
 	}
 
 }
