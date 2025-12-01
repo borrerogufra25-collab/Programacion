@@ -15,7 +15,7 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
-    <fullyQualifiedTypeName name="utilidades.Leer"/>
     <fullyQualifiedTypeName name="ejercicio.Principal"/>
     <fullyQualifiedTypeName name="ejercicio.GestionFamiliar"/>
+    <fullyQualifiedTypeName name="utilidades.Leer"/>
 </qualifiedTypeNameHistroy>
