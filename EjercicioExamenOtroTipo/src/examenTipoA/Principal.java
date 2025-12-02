@@ -8,14 +8,15 @@ public class Principal {
 
 		String nombreApellido;
 		int opcion;
+		int contador = 0;
 		int id;
 		int antiguedad;
 		int horasTrabajadas;
-		double presupuestoTotal;
-		Profesor[] p;
+		double presupuestoTotal=100000;
+		Profesor[] p = new Profesor[100];
 		Administracion ad;
-		Profesor[] p2 = { ("Pepe García", 3, 5, 8 )};
-		Administracion ad2 = new Administracion(p2, 10000);
+		Profesor[] p2 = { new Profesor("Pepe García", 3, 5, 8) };
+		ad = new Administracion(p2, 10000);
 
 		do {
 			System.out.println("*** MENU DE ADMINISTRACIÓN ***");
@@ -32,6 +33,19 @@ public class Principal {
 
 			switch (opcion) {
 			case 1:
+				System.out.println("Indique el nombre y apellido del profesor");
+				nombreApellido = Leer.dato();
+				System.out.println("Indique su identificador");
+				id = Leer.datoInt();
+				System.out.println("Indique sus años de antigüedad");
+				antiguedad = Leer.datoInt();
+				System.out.println("Indique sus horas trabajadas");
+				horasTrabajadas = Leer.datoInt();
+
+				p2 [contador] = new Profesor(nombreApellido, id, antiguedad, horasTrabajadas);
+				ad.agregarProfesor(p[contador], contador);
+
+				contador++;
 
 				break;
 			case 2:

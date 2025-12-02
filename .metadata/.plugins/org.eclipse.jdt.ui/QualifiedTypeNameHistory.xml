@@ -18,4 +18,5 @@
     <fullyQualifiedTypeName name="ejercicio.Principal"/>
     <fullyQualifiedTypeName name="ejercicio.GestionFamiliar"/>
     <fullyQualifiedTypeName name="utilidades.Leer"/>
+    <fullyQualifiedTypeName name="examenTipoA.Profesor"/>
 </qualifiedTypeNameHistroy>

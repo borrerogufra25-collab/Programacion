@@ -39,12 +39,12 @@ public class Administracion {
 		listaProfesor[contador] = p;
 	}
 
-	public void buscarProfesor(int id) {
-		
+	public void buscarProfesorID(int id) {
+
 		for (int i = 0; i < listaProfesor.length; i++) {
-			
-			
-			
+			if (condition) {
+				
+			}
 		}
 	}
 
