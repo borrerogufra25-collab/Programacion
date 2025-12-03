@@ -8,12 +8,13 @@ public class Principal {
 
 		String nombreApellido;
 		int opcion;
-		int contador = 0;
+		int contador = 1;
 		int id;
 		int antiguedad;
 		int horasTrabajadas;
-		double presupuestoTotal=100000;
-		Profesor[] p = new Profesor[100];
+		double presupuestoTotal = 100000;
+		Profesor p = new Profesor[100];
+		Profesor pPrueba = new Profesor("Pepe García", 3, 5, 8);
 		Administracion ad;
 		Profesor[] p2 = { new Profesor("Pepe García", 3, 5, 8) };
 		ad = new Administracion(p2, 10000);
@@ -42,8 +43,8 @@ public class Principal {
 				System.out.println("Indique sus horas trabajadas");
 				horasTrabajadas = Leer.datoInt();
 
-				p2 [contador] = new Profesor(nombreApellido, id, antiguedad, horasTrabajadas);
-				ad.agregarProfesor(p[contador], contador);
+				p = new Profesor(nombreApellido, id, antiguedad, horasTrabajadas);
+				ad.agregarProfesor(p, contador);
 
 				contador++;
 
