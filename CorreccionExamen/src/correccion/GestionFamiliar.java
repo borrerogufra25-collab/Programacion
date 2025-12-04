@@ -6,11 +6,13 @@ public class GestionFamiliar {
 
 	private Hijo[] listaHijos;
 	private double presupuesto;
+	private int numHijos;
 
-	public GestionFamiliar(Hijo[] listaHijos, double presupuesto) {
+	public GestionFamiliar(Hijo[] listaHijos, double presupuesto, int numHijos) {
 		super();
 		this.listaHijos = listaHijos;
 		this.presupuesto = presupuesto;
+		this.numHijos = numHijos;
 	}
 
 	public Hijo[] getListaHijos() {
@@ -29,9 +31,17 @@ public class GestionFamiliar {
 		this.presupuesto = presupuesto;
 	}
 
-	@Override
-	public String toString() {
-		return "GestionFamiliar [listaHijos=" + Arrays.toString(listaHijos) + ", presupuesto=" + presupuesto + "]";
+	public int getNumHijos() {
+		return numHijos;
 	}
 
+	public void setNumHijos(int numHijos) {
+		this.numHijos = numHijos;
+	}
+
+	@Override
+	public String toString() {
+		return "GestionFamiliar [listaHijos=" + Arrays.toString(listaHijos) + ", presupuesto=" + presupuesto
+				+ ", numHijos=" + numHijos + "]";
+	}
 }

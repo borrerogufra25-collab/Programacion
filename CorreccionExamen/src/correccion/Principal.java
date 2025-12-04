@@ -5,27 +5,31 @@ public class Principal {
 	public static void main(String[] args) {
 
 		String nombre;
-		int tam = 100;
-		int id;
-		int edad;
-		int horasEstudio;
-		double cantidad;
-		double porcentaje;
-		double presupuesto=10000;
+		int tam = 100, id, edad, horasEstudio;
+		double cantidad, porcentaje, presupuesto = 150;
 
-		// Creacion de objetos a cascaporra
+		// v1. Creacion de objetos a cascaporra
 
-		Hijo h1 = new Hijo("Pepe", 1, 13, 8);
-		Hijo h2 = new Hijo("Juan", 2, 15, 6);
+		Hijo h1 = new Hijo("Pepe", 1, 23, 6);
+		Hijo h2 = new Hijo("Juan", 2, 16, 5);
 
-		// Creación arrays de hijos
+		// Crear un array primero se crea y se da tamaño. Se puede preguntar por teclado
+		// si se quiere o a cascaporra
 
-		Hijo[] listaHijos = new Hijo[tam]; // Se puede preguntar por teclado si se quiere
+		Hijo[] listaHijos = new Hijo[tam];
 
-		// Crear objeto de gestión
+		// Formas de rellenar la lista
 
-		GestionFamiliar gf = new GestionFamiliar(listaHijos, presupuesto);
+		// 1. Mala
+		listaHijos[0] = h1;
 
+		// 2. Solo de prueba. Mal también
+		Hijo[] listaPrueba = { h1, h2 };
+		System.out.println(listaPrueba[0]);
+		System.out.println(listaPrueba[1]);
+
+		// 3. Crear un objeto del tipo GestionFamiliar
+		GestionFamiliar gf1 = new GestionFamiliar(listaPrueba, presupuesto, 2);
 	}
 
 }

@@ -5,11 +5,9 @@ public class Hijo {
 	// No se le dan valores a los atributos aquí, para eso está el contructor
 
 	private String nombre;
-	private int id;
-	private int edad;
-	private int horasEstudio;
-	
-	//Aquí tampoco
+	private int id, edad, horasEstudio;
+
+	// Aquí tampoco
 
 	public Hijo(String nombre, int id, int edad, int horasEstudio) {
 		super();
