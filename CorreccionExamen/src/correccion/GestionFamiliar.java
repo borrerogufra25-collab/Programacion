@@ -75,4 +75,47 @@ public class GestionFamiliar {
 		return null;
 	}
 
+	public double calcularTotalMayores(int topeEdad, double cantidad, double porcentaje) {
+
+		double suma = 0.0;
+
+		for (int i = 0; i < listaHijos.length; i++) {
+
+			if (listaHijos[i].getEdad() > topeEdad) {
+				suma = suma + listaHijos[i].calcularPaga(cantidad, porcentaje);
+			}
+		}
+		return suma;
+	}
+
+	// Modificar
+
+	public void modificar(int id, int nuevaHoras) {
+
+		Hijo hijoBuscado = findByIdV2(id);
+
+		if (hijoBuscado != null) {
+			hijoBuscado.setHorasEstudio(nuevaHoras);
+		}
+	}
+
+	// Comprobar paga, que mostrará un mensaje por pantalla diciendo “tengo para
+	// chuches” solo si la paga del hijo es mayor a 10 € o “ni para pipas” si no es
+	// así.
+
+	public void comprobar(int id, double topePaga, double cantHora, double porce) {
+
+		Hijo hijoBuscado = findByIdV2(id);
+
+		if (hijoBuscado != null) {
+			if (hijoBuscado.calcularPaga(cantHora, porce) > topePaga) {
+				System.out.println("Tengo para chuches");
+
+			} else {
+				System.out.println("Ni pa pipas");
+			}
+		} else {
+			System.out.println("No encontrado");
+		}
+	}
 }

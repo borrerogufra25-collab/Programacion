@@ -7,8 +7,9 @@ public class Principal {
 	public static void main(String[] args) {
 
 		String nombre;
-		int tam = 100, id, edad, horasEstudio, contador = 0;
-		double cantidad, porcentaje, presupuesto = 150;
+		int tam = 100, id, edad, horasEstudio, contador = 0, topeEdad = 0;
+		double cantidad, porcentaje, presupuesto = 150, topePaga = 0;
+		;
 		Hijo h1, h2;
 		Hijo h;
 		Hijo[] listaHijos;
@@ -65,6 +66,21 @@ public class Principal {
 
 		System.out.println(gf.findByIdV2(id));
 		System.out.println(gf.findById(id));
+
+		// Case 3 Calcular paga a mayores de una edad
+
+		System.out.println("Diga el tope de edad para cualcular la paga");
+		topeEdad = Leer.datoInt();
+		System.out.println("¿Cuántos pagas la hora de estudio?");
+		cantidad = Leer.datoDouble();
+		System.out.println("¿Cuánto es el porcentaje de intereses?");
+		porcentaje = Leer.datoDouble();
+		System.out.println(gf.calcularTotalMayores(topeEdad, cantidad, porcentaje));
+
+		// Para comprobar
+		System.out.println("Diga tope paga para comprbar");
+		topePaga = Leer.datoDouble();
+		gf.comprobar(id, topePaga, horasEstudio, porcentaje);
 
 	}
 
