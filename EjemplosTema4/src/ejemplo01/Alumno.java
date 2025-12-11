@@ -18,4 +18,10 @@ public class Alumno extends Persona {
 		return super.toString() + "Alumno [asignaturas=" + Arrays.toString(asignaturas) + ", media=" + media + "]";
 	}
 
+	// Para reescribir un método solo se cambia lo de dentro de las llaves
+
+	public int sumarEdad(int cant) {
+		return super.sumarEdad(cant) - 2;
+	}
+
 }

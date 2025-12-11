@@ -22,4 +22,8 @@ public class Persona {
 		return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", edad=" + edad + "]";
 	}
 
+	public int sumarEdad(int cant) {
+		return edad = edad + cant;
+	}
+
 }
