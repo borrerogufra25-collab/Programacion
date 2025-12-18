@@ -22,7 +22,8 @@ public class Vehiculos {
 		return "Vehiculos [categoria=" + categoria + "]";
 	}
 
-	public double calcularImpuesto() {
+	public double calcularImpuesto(double porcentaje) { // Una forma correcta sería pasar las cantidades como parámetros
+														// para poder cambiarlos en el futuro
 
 		double impuesto = 0.0;
 
@@ -43,8 +44,6 @@ public class Vehiculos {
 			impuesto = 84.92;
 			break;
 
-		default:
-			break;
 		}
 		return impuesto;
 
