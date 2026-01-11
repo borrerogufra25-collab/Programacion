@@ -4,5 +4,5 @@
 /**
  * 
  */
-module UD4Ejercicios1FranciscoBorreroGuerrero {
+module UD4Boletin1FranciscoBorreroGuerrero {
 }
