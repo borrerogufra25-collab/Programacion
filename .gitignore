@@ -1,1 +1,33 @@
+# Eclipse / IDE
 .metadata/
+.project
+.classpath
+.settings/
+
+# Eclipse builders, caches, history
+.externalToolBuilders/
+.loadpath
+.recommenders/
+.cache/
+.localhistory/
+*.log
+*.launch
+
+# Compiled class files
+*.class
+bin/
+target/
+build/
+tmp/
+
+# Common OS/editor files
+.DS_Store
+Thumbs.db
+*~ 
+*.swp
+*.tmp
+*.bak
+
+# Maven/Gradle
+# (target/ and build/ ya incluidas arriba)
+.gradle/
