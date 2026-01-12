@@ -30,9 +30,9 @@ public class Venta {
 		double total = 0;
 
 		for (int i = 0; i < lV.length; i++) {
-			if (lV[i] != null) {
-				total += lV[i].calcularSubtotal();
-			}
+
+			total += lV[i].calcularSubtotal();
+
 		}
 		return total;
 	}
