@@ -54,7 +54,7 @@ public class Principal {
 			System.out.println("1. Imprimir ticket");
 			System.out.println("2. Listar productos");
 			System.out.println("3. Salir");
-			System.out.print("Elige una opción: ");
+			System.out.print("Elige una opciÃ³n: ");
 			opcion = Leer.datoInt();
 
 			switch (opcion) {
