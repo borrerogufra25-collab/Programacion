@@ -1,13 +1,22 @@
 package ejercicio01;
 
+/*Escribe una aplicación en la que se implementen los dos métodossiguientes que deben estar en una interface:
+a) cuentaPrestados(): recibe por parámetro un array de objetos, y devuelve cuántos de ellos están
+prestados.
+b) publicacionesAnterioresA(): recibe por parámetro un array de Publicaciones y un año, y devuelve
+cuántas publicaciones tienen fecha anterior al año recibido por parámetro.
+c) En el método main(), crear un array de Publicaciones, con 2 libros y 2 revistas, prestar uno de los
+libros, mostrar por pantalla los datos almacenados en el array y mostrar por pantalla cuántas hay
+prestadas y cuantas hay anteriores a un año dado por teclado por el usuario.*/
+
 public class Principal {
 
 	public static void main(String[] args) {
 
-		Libro l1 = new Libro("El pepe", 1997, true, "Fantasía");
-		Libro l2 = new Libro("Título chulo", 2014, false, "Aventura");
-		Revista r1 = new Revista("El corazón", 1999, true, "Mierda");
-		Revista r2 = new Revista("Marca", 1990, false, "Deporte");
+		Publicacion l1 = new Libro("El pepe", 1997, true, "Fantasía");
+		Publicacion l2 = new Libro("Título chulo", 2014, false, "Aventura");
+		Publicacion r1 = new Revista("El corazón", 1999, true, "Mierda");
+		Publicacion r2 = new Revista("Marca", 1990, false, "Deporte");
 
 		Publicacion[] lista = { l1, l2, r1, r2 };
 
