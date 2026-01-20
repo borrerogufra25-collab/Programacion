@@ -30,7 +30,8 @@ public class Suite extends Habitacion {
 
 	@Override
 	public String toString() {
-		return "Suite [metrosCuadrados=" + metrosCuadrados + ", dineroServicio=" + dineroServicio + "]";
+		return super.toString()
+				+ "Suite [metrosCuadrados=" + metrosCuadrados + ", dineroServicio=" + dineroServicio + "]";
 	}
 
 	@Override

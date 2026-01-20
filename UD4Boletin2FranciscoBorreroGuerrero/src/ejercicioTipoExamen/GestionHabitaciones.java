@@ -47,4 +47,17 @@ public class GestionHabitaciones {
 		return total;
 	}
 
+	public void buscarPorNumero(int numHabitacion) {
+		boolean encontrado = false;
+
+		for (int i = 0; i < listaHabitaciones.length; i++) {
+			if (numHabitacion == listaHabitaciones[i].getNumHabitacion() && listaHabitaciones[i] != null
+					&& !encontrado) {
+
+				System.out.println("La habitación es: " + listaHabitaciones[i]);
+			}
+		}
+
+	}
+
 }
