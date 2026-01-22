@@ -17,8 +17,15 @@ public class Principal {
 
 		System.out.println(listaNombres);
 
+		// Borrar y decirle la posición a borrar
+
 		listaNombres.remove(1);
 
+		System.out.println(listaNombres);
+
+		System.out.println(listaNombres.get(1));
+
+		listaNombres.clear();
 		System.out.println(listaNombres);
 
 		List<Producto> listaProductos = new ArrayList<Producto>();
