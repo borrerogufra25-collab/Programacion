@@ -14,6 +14,7 @@ public class Principal {
 		listaNombres.add("Luck");
 		listaNombres.add("Obiwan");
 		listaNombres.add(0, "Anakin");
+		listaNombres.add("Obiwan");
 
 		System.out.println(listaNombres);
 
