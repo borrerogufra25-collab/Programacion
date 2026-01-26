@@ -64,4 +64,26 @@ public class Club {
 		return null;
 	}
 
+	public int buscarByIdDevolviendoIndice(int id) {
+
+		for (int i = 0; i < listaSocios.size(); i++) {
+
+			if (id == listaSocios.get(i).getID()) {
+
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public void actualizar(int indice, Socio socio, double nuevaCuota) {
+
+		listaSocios.set(indice, socio).setCuota(nuevaCuota);
+	}
+
+	public boolean borrar(Socio socio) {
+
+		return listaSocios.remove(socio);
+	}
+
 }

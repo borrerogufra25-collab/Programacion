@@ -96,7 +96,7 @@ public class Socio {
 
 	@Override
 	public String toString() {
-		return "Socio [nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", DNI=" + DNI
+		return "\nSocio [nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", DNI=" + DNI
 				+ ", ID=" + ID + ", edad=" + edad + ", cuota=" + cuota + ", activo=" + activo + ", antiwedad="
 				+ antiwedad + "]";
 	}
