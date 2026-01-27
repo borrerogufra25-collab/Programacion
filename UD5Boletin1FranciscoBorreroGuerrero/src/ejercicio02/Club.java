@@ -47,10 +47,22 @@ public class Club {
 
 	// CRUD
 
+	// Agregar
+	// Siempre se pasa el objeto a pasar completo
+	// Los agregar devuelven 2 cosas: nada o un boolean
+
 	public void agregarSocio(Socio socio) {
 
 		listaSocios.add(socio);
 	}
+
+	public boolean agregarSocio2Boleean(Socio socio) {
+
+		return listaSocios.add(socio);
+	}
+
+	// Buscar
+	// Se puede por int o el objeto en si
 
 	public Socio buscarById(int id) {
 
@@ -76,14 +88,48 @@ public class Club {
 		return -1;
 	}
 
-	public void actualizar(int indice, Socio socio, double nuevaCuota) {
+	// El buscar mejorado
+	// Imprimir usando for each
+	// Derecha: nombre de la colección a recorrer
+	// Izquierda: La colección del tipo de la lista
 
-		listaSocios.set(indice, socio).setCuota(nuevaCuota);
+	public void imprimirLista() {
+
+		for (Socio socio : listaSocios) {
+			System.out.println(socio);
+		}
 	}
 
-	public boolean borrar(Socio socio) {
+	// Actualizar bien hecho
 
-		return listaSocios.remove(socio);
+	public void modificarSocio(int indice, double nuevaCuota) {
+		int index = buscarByIdDevolviendoIndice(indice);
+
+		if (index >= 0) {
+			listaSocios.get(index).setCuota(nuevaCuota);
+		}
+	}
+
+	// Borrar
+
+	public void borrar(int id) {
+		Socio socio = buscarById(id);
+
+		if (socio != null) {
+			listaSocios.remove(id);
+		}
+
+	}
+
+	// Método NO CRUD
+
+	public double calcularMediaTotal(double cantidad) {
+		double total = 0;
+
+		for (Socio socio : listaSocios) {
+			total = total + socio.calcularCuotaFinal(cantidad);
+		}
+		return total / listaSocios.size();
 	}
 
 }
