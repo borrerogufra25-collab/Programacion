@@ -14,7 +14,7 @@ public class Principal {
 
 		conjunto1.add("Luismi");
 		conjunto1.add("Rafa");
-		conjunto1.add("luismi");+
+		conjunto1.add("luismi");
 		conjunto1.add("Rafa");
 
 		System.out.println(conjunto1);

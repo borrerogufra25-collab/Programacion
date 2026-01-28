@@ -7,12 +7,14 @@ public class Club {
 	private String nombreClub;
 	private List<Socio> listaSocios;
 	private int aforoPersonas;
+	private double precioCambio;
 
-	public Club(String nombreClub, List<Socio> listaSocios, int aforoPersonas) {
+	public Club(String nombreClub, List<Socio> listaSocios, int aforoPersonas, double precioCambio) {
 		super();
 		this.nombreClub = nombreClub;
 		this.listaSocios = listaSocios;
 		this.aforoPersonas = aforoPersonas;
+		this.precioCambio = precioCambio;
 	}
 
 	public String getNombreClub() {
@@ -39,10 +41,18 @@ public class Club {
 		this.aforoPersonas = aforoPersonas;
 	}
 
+	public double getPrecioCambio() {
+		return precioCambio;
+	}
+
+	public void setPrecioCambio(double precioCambio) {
+		this.precioCambio = precioCambio;
+	}
+
 	@Override
 	public String toString() {
 		return "Club [nombreClub=" + nombreClub + ", listaSocios=" + listaSocios + ", aforoPersonas=" + aforoPersonas
-				+ "]";
+				+ ", precioCambio=" + precioCambio + "]";
 	}
 
 	// CRUD
