@@ -1,6 +1,6 @@
 package ejercicio01;
 
-public class Nota {
+public class Nota implements Comparable<Nota> {
 
 	private String titulo;
 	private int id;
@@ -30,6 +30,12 @@ public class Nota {
 	@Override
 	public String toString() {
 		return "Nota [titulo=" + titulo + ", id=" + id + "]";
+	}
+
+	@Override
+	public int compareTo(Nota n) {
+
+		return 0;
 	}
 
 }

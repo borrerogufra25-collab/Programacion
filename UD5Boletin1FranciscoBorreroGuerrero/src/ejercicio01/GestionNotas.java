@@ -5,6 +5,10 @@ import java.util.List;
 
 public class GestionNotas {
 
+	// 1º private List<Nota> listaNotas; Si se hace asi no está instanciado y luego
+	// dará problemas
+	// 2º no instanciarla aqui pero si crear el constructor con contenido. No peta
+
 	private List<Nota> listaNotas = new ArrayList<Nota>();
 
 	public GestionNotas(List<Nota> listaNotas) {
@@ -25,15 +29,6 @@ public class GestionNotas {
 		return "GestionNotas [listaNotas=" + listaNotas + "]";
 	}
 
-	public void mostrarElementoLista(int posicion) {
-
-		if (listaNotas.contains(listaNotas)) {
-			listaNotas.get(posicion);
-		} else {
-			System.out.println("No encontrado");
-		}
-	}
-
 	public int contarNotas() {
 
 		return listaNotas.size();
@@ -45,16 +40,37 @@ public class GestionNotas {
 	}
 
 	public void mostrarTodaLista() {
-		System.out.println(listaNotas.toArray());
+		for (Nota nota : listaNotas) {
+			System.out.println(nota);
+		}
 	}
 
-	public void borrarNota(int numNota) {
+	public void borrarNota(int id) {
+		Nota n = findById(id);
 
-		if (listaNotas.get(numNota) != null) {
-			listaNotas.remove(numNota);
-
+		if (n != null) {
+			listaNotas.remove(n);
 		}
 
+	}
+
+	public void modificar(int id, String nuevoTitulo) {
+		Nota n = findById(id);
+
+		if (n != null) {
+			n.setTitulo(nuevoTitulo);
+		}
+
+	}
+
+	public Nota findById(int id) {
+
+		for (Nota nota : listaNotas) {
+			if (id == nota.getId()) {
+				return nota;
+			}
+		}
+		return null;
 	}
 
 }

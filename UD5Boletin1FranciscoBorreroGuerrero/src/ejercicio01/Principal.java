@@ -33,7 +33,7 @@ public class Principal {
 		listaNotas.add(n2);
 		listaNotas.add(n3);
 
-		GestionNotas gn1 = new GestionNotas(listaNotas);
+		GestionNotas gn = new GestionNotas(listaNotas);
 
 		System.out.println("Bienvenido a tus notas\n\n");
 
@@ -43,6 +43,7 @@ public class Principal {
 			System.out.println("2. Decir cuantas notas hay");
 			System.out.println("3. Agregar una nota");
 			System.out.println("4. Borrar una nota");
+			System.out.println("5. Mostrar lista");
 			System.out.println("0. Salir");
 			opcion = Leer.datoInt();
 
@@ -51,12 +52,16 @@ public class Principal {
 
 				System.out.println("¿Cuál quieres mostrar?");
 				indice = Leer.datoInt();
-				gn1.mostrarElementoLista(indice);
+				if (gn.findById(indice) == null) {
+					System.out.println("Nota no encontrada");
+				}
+				System.out.println(gn.findById(indice));
+				;
 				break;
 
 			case 2:
 
-				System.out.println("Hay un total de " + gn1.contarNotas() + " notas");
+				System.out.println("Hay un total de " + gn.contarNotas() + " notas");
 				break;
 
 			case 3:
@@ -67,15 +72,20 @@ public class Principal {
 
 				n4 = new Nota(titulo, indice);
 
-				gn1.agregarNota(n4);
+				gn.agregarNota(n4);
 				break;
 
 			case 4:
-				gn1.mostrarTodaLista();
+				gn.mostrarTodaLista();
 				System.out.println("¿Cuál quieres borrar?");
 				indice = Leer.datoInt();
-				gn1.borrarNota(indice);
+				gn.borrarNota(indice);
 
+				break;
+
+			case 5:
+
+				gn.mostrarTodaLista();
 				break;
 
 			case 0:
