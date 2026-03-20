@@ -1,6 +1,6 @@
 package ejemplo02Set;
 
-public class Alumno {
+public class Alumno implements Comparable<Alumno> {
 
 	private String nombre;
 	private String DNI;
@@ -42,4 +42,21 @@ public class Alumno {
 		return "Nombre=" + nombre + ", DNI=" + DNI + ", notaMedia=" + notaMedia;
 	}
 
+	@Override
+	public int compareTo(Alumno alumno) {
+		//Código para ordenar de forma natural
+	
+		if (this.nombre > get.nombre) {
+			
+		}
+
+	}
+
 }
+if (this.dorsal > c.dorsal) {
+	return 1;
+} else {
+	if (this.dorsal < c.dorsal) {
+		return -1;
+	}
+	return 0;
