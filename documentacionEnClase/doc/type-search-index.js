@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"documentacionEnClase","l":"DiscountCalculator"},{"p":"documentacionEnClase","l":"TimeConverter"}];updateSearchResults();
