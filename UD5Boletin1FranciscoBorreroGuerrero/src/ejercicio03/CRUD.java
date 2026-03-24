@@ -6,6 +6,7 @@ public class CRUD {
 	private Set<Alumno> listaAlumno = new HashSet<Alumno>();
 
 	// CREATE
+	// No se pasan atributos sueltos
 
 	public boolean agregarAlumno(Alumno a) {
 		return listaAlumno.add(a);
@@ -32,23 +33,29 @@ public class CRUD {
 
 	public boolean actualizarAlumno(int id, String NuevoNombre) {
 
-		for (Alumno alumno : listaAlumno) {
-			if (alumno.getId() == id) {
-				alumno.setNombre(NuevoNombre);
-				return true;
-			}
+		Alumno a = findById(id);
+
+		if (a != null) {
+			a.setNombre(NuevoNombre);
+			return true;
 		}
 		return false;
+
+		/*
+		 * for (Alumno alumno : listaAlumno) { if (alumno.getId() == id) {
+		 * alumno.setNombre(NuevoNombre); return true; } } return false;
+		 */
 	}
 
 	// DELETE
 
 	public boolean eliminarAlumno(int id) {
-		for (Alumno alumno : listaAlumno) {
-			if (alumno.getId() == id) {
-				listaAlumno.remove(alumno);
-				return true;
-			}
+
+		Alumno a = findById(id);
+
+		if (a != null) {
+			listaAlumno.remove(a); // No es bueno repetir código de buscar :)
+			return true;
 		}
 		return false;
 	}
@@ -58,7 +65,7 @@ public class CRUD {
 	public boolean eliminarAlumnoIterator(int id) {
 		Iterator<Alumno> it = listaAlumno.iterator();
 		while (it.hasNext()) {
-			Alumno alumno = (Alumno) it.next();
+			Alumno alumno = it.next();
 			if (alumno.getId() == id) {
 				it.remove();
 				return true;
@@ -66,5 +73,4 @@ public class CRUD {
 		}
 		return false;
 	}
-
 }
