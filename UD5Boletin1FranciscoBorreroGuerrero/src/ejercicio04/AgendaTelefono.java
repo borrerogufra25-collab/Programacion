@@ -30,7 +30,7 @@ public class AgendaTelefono {
 
 	public Integer buscarPorNombre(String nombre) {
 		for (Map.Entry<Contacto, Integer> entry : agenda.entrySet()) {
-			if (entry.getKey().getNombre().equalsIgnoreCase(nombre)) {
+			if (entry.getKey().getNombre().equals(nombre)) {
 				return entry.getValue();
 			}
 		}
@@ -44,4 +44,17 @@ public class AgendaTelefono {
 			System.out.println("El contacto no existe en la agenda.");
 		}
 	}
+
+	public double calcularMedia() {
+		double suma = 0;
+		for (Map.Entry<Contacto, Integer> entry : agenda.entrySet()) {
+
+			Contacto key = entry.getKey();
+
+			suma += key.getEdad();
+		}
+		return suma / agenda.size();
+
+	}
+
 }

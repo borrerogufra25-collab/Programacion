@@ -13,15 +13,15 @@ public class Principal {
 
 		int opcion, telefono;
 		String nombre, apellido;
-		Integer telEncontrado;
+		Integer telEncontrado = null;
 
 		AgendaTelefono agenda = new AgendaTelefono();
 
-		agenda.agregarContacto(new Contacto("Juan", "Pérez"), 600123123);
-		agenda.agregarContacto(new Contacto("Ana", "López"), 611222333);
-		agenda.agregarContacto(new Contacto("Carlos", "Ruiz"), 622333444);
-		agenda.agregarContacto(new Contacto("Lucía", "Martín"), 633444555);
-		agenda.agregarContacto(new Contacto("Juan", "García"), 644555666);
+		agenda.agregarContacto(new Contacto("Juan", "Pérez", 15), 600123123);
+		agenda.agregarContacto(new Contacto("Ana", "López", 18), 611222333);
+		agenda.agregarContacto(new Contacto("Carlos", "Ruiz", 19), 622333444);
+		agenda.agregarContacto(new Contacto("Lucía", "Martín", 20), 633444555);
+		agenda.agregarContacto(new Contacto("Juan", "García", 29), 644555666);
 
 		do {
 			System.out.println("\n***** AGENDA TELEFÓNICA *****");
@@ -45,7 +45,7 @@ public class Principal {
 				System.out.print("Número de teléfono: ");
 				telefono = Leer.datoInt();
 
-				agenda.agregarContacto(new Contacto(nombre, apellido), telefono);
+				agenda.agregarContacto(new Contacto(nombre, apellido, telefono), telefono);
 				System.out.println("Contacto agregado.");
 				break;
 
@@ -55,7 +55,7 @@ public class Principal {
 				System.out.print("Apellido: ");
 				apellido = Leer.dato();
 
-				agenda.borrarContacto(new Contacto(nombre, apellido));
+				agenda.borrarContacto(new Contacto(nombre, apellido, telEncontrado));
 				System.out.println("Contacto borrado");
 				break;
 
@@ -82,7 +82,7 @@ public class Principal {
 				System.out.print("Nuevo teléfono: ");
 				telefono = Leer.datoInt();
 
-				agenda.modificarTelefono(new Contacto(nombre, apellido), telefono);
+				agenda.modificarTelefono(new Contacto(nombre, apellido, telEncontrado), telefono);
 				break;
 
 			case 0:
@@ -94,6 +94,8 @@ public class Principal {
 			}
 
 		} while (opcion != 0);
+
+		System.out.println(agenda.calcularMedia());
 
 	}
 
