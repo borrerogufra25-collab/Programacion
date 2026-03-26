@@ -48,19 +48,4 @@ public class Contacto {
 		return "Contacto [nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + "]";
 	}
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o)
-			return true;
-		if (!(o instanceof Contacto))
-			return false;
-		Contacto contacto = (Contacto) o;
-		return Objects.equals(nombre, contacto.nombre) && Objects.equals(apellido, contacto.apellido);
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(nombre, apellido);
-	}
-
 }
