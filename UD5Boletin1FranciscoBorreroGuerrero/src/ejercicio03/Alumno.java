@@ -7,14 +7,14 @@ public class Alumno implements Comparable<Alumno> {
 	private String nombre;
 	private int id;
 	private String dni;
-	private List<Double> listaNotas = new ArrayList<Double>();
+	private List<Double> listaNotas;
 
 	public Alumno(String nombre, int id, String dni, List<Double> listaNotas) {
 		super();
 		this.nombre = nombre;
 		this.id = id;
 		this.dni = dni;
-		this.listaNotas = listaNotas;
+		this.listaNotas = new ArrayList<Double>();
 	}
 
 	public String getNombre() {
