@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"otraPrueba","c":"ExpenseSplitter","l":"calcularCuotaPorPersona(double, int)","u":"calcularCuotaPorPersona(double,int)"},{"p":"otraPrueba","c":"ExpenseSplitter","l":"ExpenseSplitter()","u":"%3Cinit%3E()"}];updateSearchResults();
