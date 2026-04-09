@@ -1,3 +1,9 @@
+/* Crear un programa que convierta los grados Celsius a Fahrenheit
+ * y que tenga previsto un mecanismo para que al introducir una 
+ * temperatura menor a -273 ºC, aparezca algún mensaje: “no puede
+ * haber temperaturas menores a -273 ºC” y vuelva a pedir la temperatura.
+ */
+
 package ejercicio02;
 
 import utilidades.Leer;
@@ -6,36 +12,24 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		int celsius, fahrenheit, opcion = 0;
+		int celsius, bucle = 1;
 		double resultado;
+		Operaciones o = new Operaciones();
 
 		do {
-			System.out.println("*** Calculadora de conversión de temperatura ***");
-			System.out.println("1. Pasar Celsius a Fahrenheit");
-			System.out.println("2. Pasar Fahrenheit a Celsius");
-			System.out.println("0. Salir");
-			opcion = Leer.datoInt();
-
-			switch (opcion) {
-			case 1:
-				System.out.println("Indique los Celsius a pasar: ");
+			try {
+				System.out.print("Introduce la temperatura en grados Celsius: ");
 				celsius = Leer.datoInt();
-				resultado = (celsius * 9 / 5) + 32;
-				System.out.printf("%dº Celsius es igual a %.2f", celsius, resultado);
-				break;
 
-			case 2:
-				System.out.println("Indique los Fahrenheit a pasar: ");
-				fahrenheit = Leer.datoInt();
-				resultado = (fahrenheit - 32) * 5 / 0;
-				break;
+				o.validarTemperatura(celsius);
 
-			default:
-				System.out.println("Opción Incorrecta.");
-				break;
+				resultado = o.pasarCelsius(celsius);
+				System.out.println("La temperatura en Fahrenheit es: " + resultado + " ºF");
+
+			} catch (Exception e) {
+				System.out.println(e.getMessage() + ". Inténtalo de nuevo.\n");
 			}
-
-		} while (opcion != 0);
+		} while (bucle != 0);
 
 	}
 
