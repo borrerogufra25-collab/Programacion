@@ -14,6 +14,21 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-	}
+		double[] soluciones;
+		CEcuacion2Grado eq = new CEcuacion2Grado(1, -3, 2);
 
+		try {
+			soluciones = eq.resolver();
+
+			if (soluciones.length == 1) {
+				System.out.println("Ecuación lineal. Única raíz: x = " + soluciones[0]);
+			} else {
+				System.out.println("Raíz x1 = " + soluciones[0]);
+				System.out.println("Raíz x2 = " + soluciones[1]);
+			}
+
+		} catch (EcuacionDegeneradaException | RaicesComplejasException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+	}
 }
